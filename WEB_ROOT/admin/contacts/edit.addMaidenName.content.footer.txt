@@ -1,0 +1,6 @@
+<div id="maiden-name-div">
+	<label for="custom-maiden-name-input">Maiden Name</br></label>
+	<input type="text" id="custom-maiden-name-input" name="custom-maiden-name-input" 
+	data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_maiden_name')" 
+	data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_maiden_name']">
+</div>

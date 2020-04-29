@@ -1,0 +1,7 @@
+<script>
+	function onNgBeforeDataLoad(controller) {
+		_scope.extensionsQueryParam = 'extensions=u_person_additional_info';
+	};
+
+	document.body.setAttribute('init-customization', 'onNgBeforeDataLoad');
+</script>

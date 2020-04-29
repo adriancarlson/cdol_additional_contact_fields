@@ -1,0 +1,7 @@
+<script>
+ $j(document).ready(function(){ 
+  $j('#relationship-table colgroup col:eq(6)').after('<col width="auto">');
+  $j('#relationship-table tr:eq(0) th:eq(6)').after('<th data-pss-sort-fields="activeDetail.receivesMail|number,lastFirst" class="ng=isolate-scope sortable">Receives Mail</th>');
+  $j('#relationship-table tr:eq(1) td:eq(6)').after('<td data-ng-class="{' + "'checkmark-icon'" + ': contactStudent.activeDetail.receivesMail}"><center><em id="relationship-receivesMail-{{$index}}" data-pss-validation-field="STUDENTCONTACTDETAIL.RECEIVESMAILFLG" ></em></center></td>');
+ });
+</script>

@@ -1,0 +1,9 @@
+<div id="status-div">
+    <label for="custom-status-input">Contact Is: 
+	<select id="custom-status-input" name="custom-status-input" data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_status')" data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_status']">
+		<option value="">- Select -</option>
+        <option value="Living">Living</option>
+        <option value="Deceased">Deceased</option>
+    </select>
+	</label>
+</div>
