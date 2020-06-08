@@ -1,4 +1,4 @@
-<div id="duplicate-div">
+<div id="duplicate-div" style="display:none">
     <label for="custom-duplicate-input">Contact is not a Duplicate: 
 	<select id="custom-duplicate-input" name="custom-duplicate-input" data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_status')" data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_dfp']">
 		<option value=""></option>

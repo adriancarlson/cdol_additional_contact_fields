@@ -1,5 +1,7 @@
-<script>
- $j(document).ready(function(){ 
-  $j('#duplicate-div').hide();
- });
-</script>
+~[if#distCheck.security.inrole=9]
+    <script>
+        $j(document).ready(function(){ 
+            $j('#duplicate-div').show();
+        });
+    </script>
+[/if#distCheck]
