@@ -1,5 +1,5 @@
 <script>
  $j(document).ready(function(){ 
-  $j('#duplicate-div').after('HERE!!!');
+  $j('#duplicate-div').hide();
  });
 </script>
