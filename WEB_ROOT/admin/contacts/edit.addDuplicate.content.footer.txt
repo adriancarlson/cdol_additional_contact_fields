@@ -1,6 +1,8 @@
 <div id="duplicate-div">
     <label for="custom-duplicate-input">Contact is not a Duplicate: 
-	<input id="custom-duplicate-input" name="custom-duplicate-input" data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_status')" data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_dfp']" type="checkbox" value="1">
-    </input>
+	<select id="custom-duplicate-input" name="custom-duplicate-input" data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_status')" data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_dfp']">
+		<option value=""></option>
+        <option value="1">Not Duplicate</option>
+    </select>
 	</label>
 </div>
