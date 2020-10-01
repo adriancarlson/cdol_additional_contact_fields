@@ -1,0 +1,6 @@
+<script>
+	function onNgBeforeDataLoad(controller) {
+		_scope.extensionsQueryParam = 'extensions=U_STUDENTCONTACTASSOC_ADDITIONAL_INFO';
+	};
+	document.body.setAttribute('init-customization', 'onNgBeforeDataLoad');
+</script>

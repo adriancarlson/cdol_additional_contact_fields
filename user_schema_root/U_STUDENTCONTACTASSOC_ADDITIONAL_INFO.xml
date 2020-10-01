@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<psExtension xmlns="http://www.powerschool.com"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.powerschool.com psextension.xsd">
+	<extensionname>U_STUDENTCONTACTASSOC_ADDITIONAL_INFO</extensionname>
+	<extendedTable coreTable="StudentContactAssoc" dbTableName="U_STUDENTCONTACTASSOC_ADDITIONAL_INFO" comment="Extended Fields off StudentContactAssoc" >
+		<field name="SCHOOLMESSENGERFLG" type="Boolean" />
+	</extendedTable>
+</psExtension>

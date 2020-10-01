@@ -1,0 +1,14 @@
+<!-- Determines UI field Placement -->
+<script>
+	var coreDivReceivesMail = $j('#receives-mail-div-active');
+	var custDivSmFlag = $j('#relationship-smflag-div-active');
+	coreDivReceivesMail.after(custDivSmFlag);
+	
+	coreDivReceivesMail = $j('#all-tab').find('[id^=receives-mail-div]');
+	custDivSmFlag = $j('#relationship-smflag-div-all');
+	coreDivReceivesMail.after(custDivSmFlag);
+	
+	coreDivReceivesMail = $j('#relationship-smflag-div-new');
+	custDivSmFlag = $j('#relationship-customflag-div-new');
+	coreDivReceivesMail.after(custDivSmFlag); 
+</script>
