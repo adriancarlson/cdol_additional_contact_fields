@@ -1,6 +1,6 @@
 <div id="relationship-smflag-div-all">
 	<input type="checkbox" id="relationship-smflag-{{$index}}" name="relationship-smflag-{{$index}}" 
-		data-ng-init="detail.initExtensionModel('studentcontactdetail.U_STUDENTCONTACTASSOC_ADDITIONAL_INFO.SCHOOLMESSENGERFLG')" 
-		data-ng-model="detail.extensionModel['studentcontactdetail.U_STUDENTCONTACTASSOC_ADDITIONAL_INFO.SCHOOLMESSENGERFLG']">
+		data-ng-init="detail.initExtensionModel('studentcontactdetail.U_STUDENTCONTACTASSOC_ADD_INFO.SCHOOLMESSENGERFLG')" 
+		data-ng-model="detail.extensionModel['studentcontactdetail.U_STUDENTCONTACTASSOC_ADD_INFO.SCHOOLMESSENGERFLG']">
 	<label for="relationship-smflag-{{$index}}">SchoolMessenger</label>
 </div>
