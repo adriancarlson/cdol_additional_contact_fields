@@ -1,0 +1,6 @@
+<div id="relationship-smFlag-div-active">
+	<input type="checkbox" id="relationship-smFlag-active" name="relationship-smFlag-active" 
+		data-ng-init="panel.record.activeDetail.initExtensionModel('studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg')" 
+		data-ng-model="panel.record.activeDetail.extensionModel['studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg']">
+	<label for="relationship-smFlag-{{$index}}">SchoolMessenger</label>
+</div>
