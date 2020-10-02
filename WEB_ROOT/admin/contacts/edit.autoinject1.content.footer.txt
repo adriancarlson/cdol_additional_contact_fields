@@ -1,7 +1,20 @@
 <script>
 	function onNgBeforeDataLoad(controller) {
-		_scope.extensionsQueryParam = 'extensions=u_person_additional_info';
+		_scope.extensionsQueryParam = 'extensions=u_person_additional_info,u_studentcontactdetail_cdol';
 	};
-
-	document.body.setAttribute('init-customization', 'onNgBeforeDataLoad');
+	
+        _scope.$watch('context.isContactLoaded', function(newValue, oldValue) {
+                if (newValue) {
+                    console.log('Contact loaded');
+                }
+        });
+  
+        // Add a function that responds when the extension model is updated
+        _scope.onChangeExtensionModel = function(mo) {
+            console.log('Extension model changed', mo);
+        };
+    };
+  
+    // Set attribute so the main controller knows to invoke the function when the page is loaded
+    document.body.setAttribute('init-customization', 'onNgBeforeDataLoad');
 </script>
