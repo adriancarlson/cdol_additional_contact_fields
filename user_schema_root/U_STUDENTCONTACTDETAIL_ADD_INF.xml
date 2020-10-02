@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<psExtension xmlns="http://www.powerschool.com"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.powerschool.com psextension.xsd">
-	<extensionname>U_STUDENTCONTACTDETAIL_ADD_INF</extensionname>
-	<extendedTable coreTable="StudentContactDetail" dbTableName="U_STUDENTCONTACTDETAIL_ADD_INF" comment="Extended Fields off StudentContactDetail" >
-		<field name="SCHOOLMESSENGERFLG" type="Boolean" />
-	</extendedTable>
-</psExtension>

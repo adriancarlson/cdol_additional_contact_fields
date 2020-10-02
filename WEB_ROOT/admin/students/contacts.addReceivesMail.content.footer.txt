@@ -1,7 +1,0 @@
-<script>
-$j(document).ready(function(){
-$j('#studentContactsTable colgroup col:eq(9)').after('<col style="width: auto">');
-$j('#studentContactsTable tr:eq(0) th:eq(9)').after('<th>Receives Mail</th>');
-$j('#studentContactsTable tr:eq(1) td:eq(9)').after('<td data-ng-class="{' + "'checkmark-icon'" + ': contact.contactStudents[0].activeDetail.receivesMail}"><center><em id="contact-receivesMail-{{$index}}" data-pss-validation-field="STUDENTCONTACTDETAIL.RECEIVESMAILFLG" ></em></center></td>');
-});
-</script>
