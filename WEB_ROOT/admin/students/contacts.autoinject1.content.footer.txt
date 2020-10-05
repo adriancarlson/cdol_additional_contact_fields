@@ -3,8 +3,8 @@
 		_scope.extensionsQueryParam = 'extensions=u_studentcontactdetail_cdol';
 	};
 
-	document.body.setAttribute('init-customization', 'onNgBeforeDataLoad');
-    
+	document.getElementById("studentContactsPage").setAttribute('init-customization', 'onNgBeforeDataLoad');
+
 
 	jQuery("#studentContactsTable colgroup col:eq(10)").after('<col style="width: auto">');
 	jQuery("#studentContactsTable tr:eq(0) th:eq(10)").after('<th>School Messenger</th>');
