@@ -1,0 +1,7 @@
+<div id="phonetic-div" style="display:none">
+	<label for="custom-phonetic-pronunciation-input">Phonetic Pronunciation</br></label>
+	<input type="text" id="custom-phonetic-pronunciation-input" name="custom-maiden-name-input"
+		data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_phonetic_pronunciation')"
+		data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_phonetic_pronunciation']">
+	<i>&nbsp;(How the contacts's name should sound when said aloud)</i>
+</div>
