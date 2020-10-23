@@ -1,0 +1,16 @@
+<script>
+    jQuery(document).ready(function () {
+        var myTimeOut;
+        function waitAngularFinish() {
+            //wait until #loading dialog is in DOM and has been set to hidden
+            if (jQuery('#loading').length > 0 && jQuery('#loading:visible').length === 0) {
+                clearTimeout(myTimeOut);
+                jQuery('#employer-div').css("width", "500px");
+                jQuery('#employer-input').css("width", "490px");
+            } else {
+                myTimeOut = setTimeout(waitAngularFinish, 100);
+            }
+        }
+        myTimeOut = setTimeout(waitAngularFinish, 100);
+});
+</script>

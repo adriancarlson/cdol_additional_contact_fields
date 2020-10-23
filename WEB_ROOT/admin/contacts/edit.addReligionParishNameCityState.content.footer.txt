@@ -7,9 +7,9 @@
             <option value="Non-Catholic">Non-Catholic</option>
         </select>
 	</div>
-    <div id="parish-div">
+    <div id="parish-div" style="width: 260px;">
         <label for="custom-parish-input">Parish</br></label>
-        <input type="text" id="custom-parish-input" name="custom-parish-input" 
+        <input type="text" id="custom-parish-input" name="custom-parish-input"  style="width: 250px;"
         data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_parish')" 
         data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_parish']">
     </div>

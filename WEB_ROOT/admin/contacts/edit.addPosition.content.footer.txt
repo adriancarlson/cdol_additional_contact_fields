@@ -1,0 +1,6 @@
+<div id="position-div" style="width: 260px;">
+	<label for="custom-position-input">Position</br></label>
+	<input type="text" id="custom-position-input" name="custom-position-input"  style="width: 250px;"
+	data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_position')" 
+	data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_position']">
+</div>
