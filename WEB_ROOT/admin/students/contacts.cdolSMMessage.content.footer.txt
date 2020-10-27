@@ -1,0 +1,34 @@
+<div class="feedback-info" id="tooManyMessage" style="display: none;">
+    <p>~(studentname) has more than 4 SchoolMessenger Contacts. Only the first 4 Contacts with the SchoolMessenger flag
+        will be uploaded to SchoolMessenger and receive messages.</p>
+</div>
+
+
+<script>
+    ~[tlist_sql;
+        SELECT count(person.id)
+FROM   person
+INNER JOIN studentcontactassoc
+    ON person.id = studentcontactassoc.personid
+INNER JOIN studentcontactdetail
+    ON studentcontactassoc.studentcontactassocid = studentcontactdetail.studentcontactassocid
+LEFT JOIN u_studentcontactdetail_cdol
+   ON studentcontactdetail.studentcontactdetailid = u_studentcontactdetail_cdol.studentcstudentcontactdetailid
+JOIN students 
+    ON studentcontactassoc.studentdcid = students.dcid
+WHERE 
+u_studentcontactdetail_cdol.schoolmessengerflg = 1
+and
+students.dcid = ~(curstudid)
+    ]
+    var smCount = ~(count);
+    [/tlist_sql]
+
+if (smCount > 4) {
+        $j(document).ready(function () {
+            var tooMany = $j('tooManyMessage');
+            tooMany.show();
+
+        });
+    }
+</script>
