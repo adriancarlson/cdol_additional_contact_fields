@@ -1,5 +1,6 @@
-<div class="feedback-info" id="tooManyMessage" style="display: none;">
-    <p>~(studentname) has more than 4 SchoolMessenger Contacts. Only the first 4 Contacts with the SchoolMessenger flag
+<div class="feedback-alert" id="tooManyMessage" style="display: none;">
+    <p>~([students]first_name) ~([students]last_name) has more than 4 School Messenger contacts. Only the first 4
+        contacts with the School Messenger flag
         will be uploaded to SchoolMessenger and receive messages.</p>
 </div>
 
@@ -26,7 +27,8 @@ students.dcid = ~(curstudid)
 
 if (smCount > 4) {
         $j(document).ready(function () {
-            var tooMany = $j('tooManyMessage');
+            var tooMany = $j('#tooManyMessage');
+            $j("#studentContactsTable").after(tooMany);
             tooMany.show();
 
         });
