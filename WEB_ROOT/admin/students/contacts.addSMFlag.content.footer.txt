@@ -8,8 +8,10 @@
 
 
 <script type="text/javascript">
+
 	// Add new SM Notifications column to the main list
-	$j('#studentContactsTable colgroup col:last').before('<col style="width: auto">');
-	$j('#studentContactsTable tr:first th:last').before('<th>SM Notifications</th>');
-	$j('#studentContactsTable tr:last td:last').before('<td data-ng-class="{\'checkmark-icon\': contact.contactStudents[0].activeDetail.getExtensionFieldValue(\'studentcontactdetail\', \'u_studentcontactdetail_cdol\', \'schoolmessengerflg\')}"><center><em id="receives-smnotifications-{{$index}}" data-pss-validation-field="studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg" ></em></center></td>');
+	jQuery("#studentContactsTable colgroup col:eq(10)").after('<col style="width: auto">');
+	jQuery("#studentContactsTable tr:eq(0) th:eq(10)").after('<th>School Messenger</th>');
+	jQuery("#studentContactsTable tr:eq(1) td:eq(10)").after('<td data-ng-class="{\'checkmark-icon\': contact.contactStudents[0].activeDetail.getExtensionFieldValue(\'studentcontactdetail\', \'u_studentcontactdetail_cdol\', \'schoolmessengerflg\')}"><center><em id="receives-smnotifications-{{$index}}" data-pss-validation-field="studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg" ></em></center></td>');
+
 </script>
