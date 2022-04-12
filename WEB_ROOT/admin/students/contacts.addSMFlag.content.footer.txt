@@ -1,0 +1,15 @@
+<script>
+	require(['components/shared/utils/psCustomizationUtils'], function (psCU) {
+		var psCustomizationUtils = psCU;
+		var api = '/ws/contacts/student/{id}';
+		psCustomizationUtils.addExtensions([{ url: api, extensions: 'u_person_additional_info,u_studentcontactdetail_cdol' }]);
+	});
+</script>
+
+
+<script type="text/javascript">
+	// Add new SM Notifications column to the main list
+	$j('#studentContactsTable colgroup col:last').before('<col style="width: auto">');
+	$j('#studentContactsTable tr:first th:last').before('<th>SM Notifications</th>');
+	$j('#studentContactsTable tr:last td:last').before('<td data-ng-class="{\'checkmark-icon\': contact.contactStudents[0].activeDetail.getExtensionFieldValue(\'studentcontactdetail\', \'u_studentcontactdetail_cdol\', \'schoolmessengerflg\')}"><center><em id="receives-smnotifications-{{$index}}" data-pss-validation-field="studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg" ></em></center></td>');
+</script>

@@ -1,0 +1,6 @@
+<div id="receives-smnotifications-div-all">
+	<input type="checkbox" id="receives-smnotifications-{{$index}}" name="receives-smnotifications-{{$index}}"
+		data-ng-init="detail.initExtensionModel('studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg')"
+		data-ng-model="detail.extensionModel['studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg']">
+	<label for="receives-smnotifications-{{$index}}">SchoolMessenger</label>
+</div>
