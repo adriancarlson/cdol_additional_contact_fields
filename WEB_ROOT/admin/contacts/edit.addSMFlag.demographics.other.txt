@@ -1,0 +1,19 @@
+<!-- admin/contacts/edit.addSMFlag.demographics.other.txt -->
+<script type="text/javascript">
+
+	// Move Active version of new field
+	var coreDiv = $j('#receives-mail-div-active');
+	var custDiv = $j('#receives-smnotifications-div-active');
+	coreDiv.after(custDiv);
+
+	// Move All version of new field
+	coreDiv = $j('#all-tab').find('div[id^=receives-mail-div]');
+	custDiv = $j('#receives-smnotifications-div-all');
+	coreDiv.after(custDiv);
+
+	// Move New version of new field
+	coreDiv = $j('#receives-mail-div-new');
+	custDiv = $j('#receives-smnotifications-div-new');
+	coreDiv.after(custDiv);
+
+</script>

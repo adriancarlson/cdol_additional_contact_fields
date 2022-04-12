@@ -1,0 +1,19 @@
+<script>
+	require(['components/shared/utils/psCustomizationUtils'], function (psCU) {
+		var psCustomizationUtils = psCU;
+		var api = '/ws/contacts/contact/{id}';
+		psCustomizationUtils.addExtensions([{ url: api, extensions: 'u_person_additional_info,u_studentcontactdetail_cdol' }]);
+	});
+</script>
+<script type="text/javascript">
+
+	//adding SchoolMessenger colgorup definitions 
+	jQuery("#relationship-table colgroup col:eq(7)").after('<col style="width: auto">');
+
+	//adding SchoolMessenger header row  
+  	jQuery("#relationship-table tr:eq(0) th:eq(7)").after('<th data-pss-sort-fields="activeDetail.schoolMessenger|number,lastFirst" class="ng=isolate-scope sortable">School Messenger</th>');
+
+	// Add schoolMessenger column value 
+  	jQuery("#relationship-table tr:eq(1) td:eq(7)").after('<td data-ng-class="{\'checkmark-icon\': contactStudent.activeDetail.getExtensionFieldValue(\'studentcontactdetail\', \'u_studentcontactdetail_cdol\', \'schoolmessengerflg\')}"><center><em id="receives-smnotifications-{{$index}}" data-pss-validation-field="studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg" ></em></center></td>');
+
+</script>
