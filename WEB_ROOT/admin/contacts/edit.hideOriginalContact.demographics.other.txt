@@ -1,0 +1,7 @@
+<script>
+let checkExist = setInterval(function() {
+   if ($j('#original-contact-type-fields').length) {
+      $j('#original-contact-type-fields').hide();
+   }
+}, 100); 
+</script>
