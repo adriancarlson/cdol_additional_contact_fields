@@ -1,9 +1,9 @@
 <script>
-	require(['components/shared/utils/psCustomizationUtils'], function (psCU) {
-		var psCustomizationUtils = psCU;
-		var api = '/ws/contacts/contact/{id}';
-		psCustomizationUtils.addExtensions([{ url: api, extensions: 'u_person_additional_info,u_studentcontactdetail_cdol' }]);
-	});
+	function onNgBeforeDataLoad(controller) {
+		_scope.extensionsQueryParam = 'extensions=u_person_additional_info,u_studentcontactdetail_cdol';
+	};
+
+	document.body.setAttribute('init-customization', 'onNgBeforeDataLoad');
 </script>
 <script type="text/javascript">
 
