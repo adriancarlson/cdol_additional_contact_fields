@@ -1,6 +1,8 @@
 <div id="receives-smnotifications-div-new">
-	<input type="checkbox" id="receives-smnotifications-new" name="receives-smnotifications-new"
-		data-ng-init="panel.record.newDetail.initExtensionModel('studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg')"
-		data-ng-model="panel.record.newDetail.extensionModel['studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg']">
-	<label for="receives-smnotifications-new">SchoolMessenger</label>
+   <input type="checkbox"
+          id="receives-smnotifications-new"
+          name="receives-smnotifications-new"
+          data-ng-init="panel.record.newDetail.initExtensionModel('studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg')"
+          data-ng-model="panel.record.newDetail.extensionModel['studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg']">
+   <label for="receives-smnotifications-new">SchoolMessenger</label>
 </div>

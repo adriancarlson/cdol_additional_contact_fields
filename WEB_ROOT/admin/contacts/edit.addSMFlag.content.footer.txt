@@ -1,19 +1,85 @@
+~[if#multi.~[x:version;short]>=21.4.2]
 <script>
-	function onNgBeforeDataLoad(controller) {
-		_scope.extensionsQueryParam = 'extensions=u_person_additional_info,u_studentcontactdetail_cdol';
-	};
-
-	document.body.setAttribute('init-customization', 'onNgBeforeDataLoad');
+    require(['components/shared/utils/psCustomizationUtils'], function(psCU){
+        var psCustomizationUtils4kisd = psCU;
+        var api = '/ws/contacts/contact/{id}';
+        psCustomizationUtils4kisd.addExtensions([{url: api, extensions:'u_studentcontactdetail_cdol'}]);
+    });
 </script>
+[else#multi]
+<script>
+    function onNgBeforeDataLoadKISD(controller) {
+        //console.log('on before load', controller);
+  
+        // Set the scope variable that the main controller looks for when building the request
+        _scope.extensionsQueryParam = 'extensions=u_studentcontactdetail_cdol';
+  
+        // Add a function that responds when the contact data is received
+        _scope.$watch('context.isContactLoaded', function(newValue, oldValue) {
+                if (newValue) {
+                    //console.log('Contact loaded');
+                }
+        });
+        // Add a function that responds when the extension model is updated
+        _scope.onChangeExtensionModel = function(mo) {
+            //console.log('Extension model changed', mo);
+        };
+    };
+  
+    // Set attribute so the main controller knows to invoke the function when the page is loaded
+    $j(function(){
+        document.body.setAttribute('init-customization', 'onNgBeforeDataLoadKISD');
+    });
+</script>
+[/if#multi]
+
 <script type="text/javascript">
 
-	//adding SchoolMessenger colgorup definitions 
-	jQuery("#relationship-table colgroup col:eq(7)").after('<col style="width: auto">');
+    $j(function() {
+        var tbl = $j('#relationship-table');
+        // Add new SM Notifications column to the relationships list
+        tbl.find('colgroup col').last().before('<col style="width: auto">');
+        tbl.find('tr').first().find('th').last().before('<th>SM Notifications</th>');
+        tbl.find('tr').last().find('td').last().before('<td data-ng-class="{\'checkmark-icon\': contactStudent.activeDetail.getExtensionFieldValue(\'studentcontactdetail\', \'u_studentcontactdetail_cdol\', \'schoolmessengerflg\')}"><center><em id="receives-smnotifications-{{$index}}" data-pss-validation-field="studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg" ></em></center></td>');
 
-	//adding SchoolMessenger header row  
-  	jQuery("#relationship-table tr:eq(0) th:eq(7)").after('<th data-pss-sort-fields="activeDetail.schoolMessenger|number,lastFirst" class="ng=isolate-scope sortable">School Messenger</th>');
-
-	// Add schoolMessenger column value 
-  	jQuery("#relationship-table tr:eq(1) td:eq(7)").after('<td data-ng-class="{\'checkmark-icon\': contactStudent.activeDetail.getExtensionFieldValue(\'studentcontactdetail\', \'u_studentcontactdetail_cdol\', \'schoolmessengerflg\')}"><center><em id="receives-smnotifications-{{$index}}" data-pss-validation-field="studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg" ></em></center></td>');
-
+        // $j(document).on('click',tbl.find('tbody button'), function(){
+        //     fixKISDFieldLocations();
+        // });
+    });
+    
+/* Thanks to Jason Treadwell who shared this with me * /
+function fixKISDFieldLocations() {
+    console.log("in fixKISDFieldLocations()");
+	//move checkbox to desired location in active tab
+    var coreDiv, custDiv = null;
+    var checkDemoActiveExist = setInterval(function() {
+        coreDiv = $j('#receives-mail-div-active');
+        if ( coreDiv.length ) {
+            custDiv = $j('#receives-smnotifications-div-active');
+            coreDiv.after(custDiv);
+            clearInterval(checkDemoActiveExist);
+        }
+    }, 50); // check every 50ms
+	
+	//move checkbox to desired location in all tab
+    var checkDemoAllExist = setInterval(function() {
+        coreDiv = $j('#all-tab').find('div[id^=receives-mail-div]');
+        if ( coreDiv.length ) {
+            custDiv = $j('#receives-smnotifications-div-all');
+            coreDiv.after(custDiv);
+            clearInterval(checkDemoAllExist);
+        }
+    }, 50); // check every 50ms
+	
+	//move checkbox to desired location in new tab
+    var checkDemoNewExist = setInterval(function() {
+        coreDiv = $j('#receives-mail-div-new');
+        if ( jQuery('#ba-filter_override-div-new').length ) {
+            custDiv = $j('#receives-smnotifications-div-new');
+            coreDiv.after(custDiv);
+            clearInterval(checkDemoNewExist);
+        }
+    }, 50); // check every 50ms
+}
+/* */
 </script>
