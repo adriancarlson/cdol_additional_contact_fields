@@ -1,14 +1,14 @@
 <script>
-    require(['components/shared/utils/psCustomizationUtils'], function(psCU){
+    require(['components/shared/utils/psCustomizationUtils'], function (psCU) {
         let psCustomizationUtilsCDOL = psCU;
         let api = '/ws/contacts/contact/{id}';
-        psCustomizationUtilsCDOL.addExtensions([{url: api, extensions:'u_studentcontactdetail_cdol'}]);
+        psCustomizationUtilsCDOL.addExtensions([{ url: api, extensions: 'u_studentcontactdetail_cdol', extensionMap: {} }]);
     });
 </script>
 
 <script type="text/javascript">
 
-    $j(function() {
+    $j(function () {
         let tbl = $j('#relationship-table');
         tbl.find('colgroup col').eq(7).before('<col style="width: auto">');
         tbl.find('tr').first().find('th').eq(7).after('<th data-pss-sort-fields="activeDetail.schoolMessenger|number,lastFirst" class="ng=isolate-scope sortable">School Messenger</th>');

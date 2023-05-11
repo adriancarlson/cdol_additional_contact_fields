@@ -1,14 +1,14 @@
 <script>
-    require(['components/shared/utils/psCustomizationUtils'], function(psCU) {
+    require(['components/shared/utils/psCustomizationUtils'], function (psCU) {
         let psCustomizationUtilsCDOL = Object.assign({}, psCU);
-        psCustomizationUtilsCDOL.addExtensions([{url: '/ws/contacts/student/{id}', extensions: 'u_studentcontactdetail_cdol'}]);
+        psCustomizationUtilsCDOL.addExtensions([{ url: '/ws/contacts/student/{id}', extensions: 'u_studentcontactdetail_cdol', extensionMap: {} }]);
     });
 </script>
 
 
 <script type="text/javascript">
 
-    $j( function() {
+    $j(function () {
         let tbl = $j("#studentContactsTable");
         tbl.find('colgroup col:eq(10)').after('<col style="width: auto">');
         tbl.find('tr').first().find('th').eq(10).after('<th>School Messenger</th>');
