@@ -10,8 +10,8 @@
 
     $j(function () {
         let tbl = $j("#studentContactsTable");
-        tbl.find('colgroup col:eq(10)').after('<col style="width: auto">');
-        tbl.find('tr').first().find('th').eq(10).after('<th>School Messenger</th>');
-        tbl.find('tr').eq(1).find('td').eq(10).after('<td data-ng-class="{\'checkmark-icon\': contact.contactStudents[0].activeDetail.getExtensionFieldValue(\'studentcontactdetail\', \'u_studentcontactdetail_cdol\', \'schoolmessengerflg\')}"><center><em id="receives-smnotifications-{{$index}}" data-pss-validation-field="studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg" ></em></center></td>');
+        tbl.find('colgroup col:eq(9)').after('<col style="width: auto">');
+        tbl.find('tr').first().find('th').eq(9).after('<th>School Messenger</th>');
+        tbl.find('tr').eq(1).find('td').eq(9).after('<td data-ng-class="{\'checkmark-icon\': contact.contactStudents[0].activeDetail.getExtensionFieldValue(\'studentcontactdetail\', \'u_studentcontactdetail_cdol\', \'schoolmessengerflg\')}"><center><em id="receives-smnotifications-{{$index}}" data-pss-validation-field="studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg" ></em></center></td>');
     });
 </script>
