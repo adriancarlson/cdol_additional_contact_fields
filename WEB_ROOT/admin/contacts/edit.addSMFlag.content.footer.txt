@@ -10,9 +10,14 @@
 
     $j(function () {
         let tbl = $j('#relationship-table');
+        
         tbl.find('colgroup col').eq(6).before('<col style="width: auto">');
-        tbl.find('tr').first().find('th').eq(6).after('<th data-pss-sort-fields="activeDetail.schoolMessenger|number,lastFirst" class="ng=isolate-scope sortable">School Messenger</th>');
-        tbl.find('tr').eq(1).find('td').eq(6).after('<td data-ng-class="{\'checkmark-icon\': contactStudent.activeDetail.getExtensionFieldValue(\'studentcontactdetail\', \'u_studentcontactdetail_cdol\', \'schoolmessengerflg\')}"><center><em id="receives-smnotifications-{{$index}}" data-pss-validation-field="studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg" ></em></center></td>');
+        tbl.find('tr').first().find('th').eq(6).after('<th data-pss-sort-fields="activeDetail.receivesMail" class="ng=isolate-scope sortable">Receives Mail</th>');
+        tbl.find('tr').eq(1).find('td').eq(6).after('<td data-ng-class="{\'checkmark-icon\': contactStudent.activeDetail.receivesMail}"><center><em id="relationship-receivesmail-display-{{$index}}" data-pss-validation-field="STUDENTCONTACTDETAIL.RECEIVESMAILFLG" ></em></center></td>');
+        
+        tbl.find('colgroup col').eq(7).before('<col style="width: auto">');
+        tbl.find('tr').first().find('th').eq(7).after('<th data-pss-sort-fields="activeDetail.schoolMessenger|number,lastFirst" class="ng=isolate-scope sortable">School Messenger</th>');
+        tbl.find('tr').eq(1).find('td').eq(7).after('<td data-ng-class="{\'checkmark-icon\': contactStudent.activeDetail.getExtensionFieldValue(\'studentcontactdetail\', \'u_studentcontactdetail_cdol\', \'schoolmessengerflg\')}"><center><em id="receives-smnotifications-{{$index}}" data-pss-validation-field="studentcontactdetail.u_studentcontactdetail_cdol.schoolmessengerflg" ></em></center></td>');
 
     });
 </script>
