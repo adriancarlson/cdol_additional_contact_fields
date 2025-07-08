@@ -1,7 +1,7 @@
 <script>
-	function onNgBeforeDataLoad(controller) {
-		_scope.extensionsQueryParam = 'extensions=u_person_additional_info, u_studentcontactdetail_cdol';
-	};
-
-	document.body.setAttribute('init-customization', 'onNgBeforeDataLoad');
+	require(['components/shared/utils/psCustomizationUtils'], function (psCU) {
+		var psCustomizationUtils4kisd = psCU;
+		var api = '/ws/contacts/contact/{id}';
+		psCustomizationUtils4kisd.addExtensions([{ url: api, extensions: 'u_person_additional_info, u_studentcontactdetail_cdol', extensionMap: {} }]);
+	});
 </script>
