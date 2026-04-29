@@ -1,6 +1,6 @@
 <div>
 	<div id="religion-div">
-		<label for="custom-religion-input">Religion</br></label>
+		<label for="custom-religion-input">Religion</label>
         <select id="custom-religion-input" name="custom-religion-input" data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_religion')" data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_religion']">
 	        <option value="">- Select -</option>
 	        <option value="Catholic">Catholic</option>
@@ -8,19 +8,19 @@
         </select>
 	</div>
     <div id="parish-div" style="width: 260px;">
-        <label for="custom-parish-input">Parish</br></label>
+        <label for="custom-parish-input">Parish</label>
         <input type="text" id="custom-parish-input" name="custom-parish-input"  style="width: 250px;"
         data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_parish')" 
         data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_parish']">
     </div>
 	    <div id="parish-city-div">
-        <label for="custom-parish-city-input">Parish City</br></label>
+        <label for="custom-parish-city-input">Parish City</label>
         <input type="text" id="custom-parish-city-input" name="custom-parish-city-input" 
         data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_parish_city')" 
         data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_parish_city']">
     </div>
 	<div id="parish-state-div">
-        <label for="custom-parish-state-input">Parish State</br></label>
+        <label for="custom-parish-state-input">Parish State</label>
         <select id="custom-parish-state-input" name="custom-parish-state-input" data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_parish_state')" data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_parish_state']">
             <option value="">- Select -</option>
             <option value="NE">Nebraska</option>

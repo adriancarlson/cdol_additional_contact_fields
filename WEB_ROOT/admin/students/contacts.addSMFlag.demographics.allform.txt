@@ -1,4 +1,4 @@
-<!-- KISD - Custom flag on StudentContactDetail, 'All' tab -->
+<!-- CDOL - Custom flag on StudentContactDetail, 'All' tab -->
 <div id="receives-smnotifications-div-all">
    <input type="checkbox"
           id="receives-smnotifications-{{$index}}"
