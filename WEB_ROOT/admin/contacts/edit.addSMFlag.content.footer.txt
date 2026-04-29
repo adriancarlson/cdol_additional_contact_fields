@@ -1,8 +1,6 @@
 <script>
     require(['components/shared/utils/psCustomizationUtils'], function (psCU) {
-        let psCustomizationUtilsCDOL = psCU;
-        let api = '/ws/contacts/contact/{id}';
-        psCustomizationUtilsCDOL.addExtensions([{ url: api, extensions: 'u_studentcontactdetail_cdol', extensionMap: {} }]);
+        psCU.addExtensions([{ url: '/ws/contacts/contact/{id}', extensions: 'u_studentcontactdetail_cdol', extensionMap: {} }]);
     });
 </script>
 

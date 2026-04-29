@@ -1,8 +1,6 @@
 <script>
 	require(['components/shared/utils/psCustomizationUtils'], function (psCU) {
-		var psCustomizationUtilsCDOL = psCU;
-
-		psCustomizationUtilsCDOL.addExtensions([
+		psCU.addExtensions([
 			{
 				url: '/ws/contacts/contact/{id}',
 				extensions: 'u_person_additional_info,u_studentcontactdetail_cdol',
