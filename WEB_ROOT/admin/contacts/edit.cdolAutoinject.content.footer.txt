@@ -1,7 +1,18 @@
 <script>
 	require(['components/shared/utils/psCustomizationUtils'], function (psCU) {
-		var psCustomizationUtils4kisd = psCU;
-		var api = '/ws/contacts/contact/{id}';
-		psCustomizationUtils4kisd.addExtensions([{ url: api, extensions: 'u_person_additional_info, u_studentcontactdetail_cdol', extensionMap: {} }]);
+		var psCustomizationUtilsCDOL = psCU;
+
+		psCustomizationUtilsCDOL.addExtensions([
+			{
+				url: '/ws/contacts/contact/{id}',
+				extensions: 'u_person_additional_info,u_studentcontactdetail_cdol',
+				extensionMap: {}
+			},
+			{
+				url: '/ws/contacts/merge',
+				extensions: 'u_person_additional_info,u_studentcontactdetail_cdol',
+				extensionMap: {}
+			}
+		]);
 	});
 </script>
