@@ -1,4 +1,3 @@
-<!-- CDOL - Custom flag on StudentContactDetail, New/Add record -->
 <div id="receives-smnotifications-div-new">
    <input type="checkbox"
           id="receives-smnotifications-new"

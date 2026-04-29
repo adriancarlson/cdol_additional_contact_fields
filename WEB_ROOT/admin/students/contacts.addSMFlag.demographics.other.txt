@@ -1,4 +1,3 @@
-<!-- admin/students/contacts.addSMFlag.demographics.other.txt -->
 <script type="text/javascript">
     // Move Active version of new field
     var coreDiv = $j('#receives-mail-div-active');
