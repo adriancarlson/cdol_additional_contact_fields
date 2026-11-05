@@ -1,4 +1,90 @@
-<div>
+<!-- Keep both rows in one insertion so employer details always precede religion/parish. -->
+<div id="employer-details-div" style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <div id="employer-address-div" style="width: 300px;">
+        <label for="custom-employer-address-input">Employer Address</label>
+        <input type="text" id="custom-employer-address-input" name="custom-employer-address-input" maxlength="255" style="width: 100%; box-sizing: border-box;"
+        data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_employer_address')"
+        data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_employer_address']">
+    </div>
+    <div id="employer-city-div" style="width: 200px;">
+        <label for="custom-employer-city-input">Employer City</label>
+        <input type="text" id="custom-employer-city-input" name="custom-employer-city-input" maxlength="100" style="width: 100%; box-sizing: border-box;"
+        data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_employer_city')"
+        data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_employer_city']">
+    </div>
+    <div id="employer-state-div" style="width: 150px;">
+        <label for="custom-employer-state-input">Employer State</label>
+        <select id="custom-employer-state-input" name="custom-employer-state-input" style="width: 100%; box-sizing: border-box;"
+        data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_employer_state')"
+        data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_employer_state']">
+            <option value="">- Select -</option>
+            <option value="NE">Nebraska</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+        </select>
+    </div>
+    <div id="employer-zip-div" style="width: 110px;">
+        <label for="custom-employer-zip-input">Employer ZIP</label>
+        <input type="text" id="custom-employer-zip-input" name="custom-employer-zip-input" maxlength="10" style="width: 100%; box-sizing: border-box;"
+        data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_employer_zip')"
+        data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_employer_zip']">
+    </div>
+    <div id="employer-phone-div" style="width: 210px;">
+        <label for="custom-employer-phone-input">Employer Phone Number</label>
+        <input type="text" id="custom-employer-phone-input" name="custom-employer-phone-input" maxlength="40" style="width: 100%; box-sizing: border-box;"
+        data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_employer_phone')"
+        data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_employer_phone']">
+    </div>
+</div>
+<div id="religion-parish-div">
 	<div id="religion-div">
 		<label for="custom-religion-input">Religion</label>
         <select id="custom-religion-input" name="custom-religion-input" data-ng-init="context.currentContact.initExtensionModel('person.u_person_additional_info.person_religion')" data-ng-model="context.currentContact.extensionModel['person.u_person_additional_info.person_religion']">
