@@ -1,11 +1,3 @@
-<div id="financially-responsible-div-active">
-   <input type="checkbox"
-          id="financially-responsible-active"
-          name="financially-responsible-active"
-          data-ng-init="panel.record.activeDetail.initExtensionModel('studentcontactdetail.u_studentcontactdetail_cdol.financiallyresponsibleflg')"
-          data-ng-model="panel.record.activeDetail.extensionModel['studentcontactdetail.u_studentcontactdetail_cdol.financiallyresponsibleflg']">
-   <label for="financially-responsible-active">Financially Responsible</label>
-</div>
 <div id="receives-smnotifications-div-active">
    <input type="checkbox"
           id="receives-smnotifications-active"
